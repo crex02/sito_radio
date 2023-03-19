@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,100&display=swap');
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: 4;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.play {
+    margin-right: 5vw;
+    padding-left: 2vw;
+}
+
+.logo {
+    width: 14vw;
+    height: 14vw;
+    margin: 1.7vh;
+    padding-top: 2vw;
+}
+
+.player {
+    padding-left: 2vw;
+    width: 15.85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2vw;
+}
+
+.woman {
+    background-color: #660099;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+}
+
+
+.schedule {
+    background-color: #fafafa;
+    overflow: hidden;
+    font-weight: 900;
+    height: fit-content;
+}
+
+.scheduletop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    font-size: 200px;
+    flex-basis: 1;
+    overflow: none;
+}
+
+.schedulebottom {
+    height: fit-content;
+}
+
+.scheduleleft,
+.scheduleright {
+    width: 50%;
+    padding-left: 2vw;
+    font-weight: bolder;
+}
+
+.point {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    float: right;
+    margin: 50px;
+}
+
+.grid-container {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . mon"
+        "tue wed ."
+        ". thu ."
+        ". . fri"
+        "sat sun .";
+
+}
+
+.mon,
+.tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun {
+
+    height: fit-content;
+}
+
+.mon {
+    grid-area: mon;
+}
+
+.tue {
+    grid-area: tue;
+}
+
+.wed {
+    grid-area: wed;
+}
+
+.thu {
+    grid-area: thu;
+}
+
+.fri {
+    grid-area: fri;
+}
+
+.sat {
+    grid-area: sat;
+}
+
+.sun {
+    grid-area: sun;
+}
+
+ul {
+    font-size: 50px;
+    list-style-type: none;
+}
+
+li {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.hour,
+.program {
+    display: inline;
+}
+
+.program {
+    padding: 0px 20px;
+
+}
+
+.txt-player {
+    margin: 1vh;
+}
+
+span {
+    font-size: xx-large;
+}
+
+.hr-black>hr {
+    height: 1px;
+    background-color: black;
+    border: solid black 1px;
+}
+
+.sliding-rows {
+    height: 200vh;
+    width: 100vw;
+    background-color: #ffcc00;
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    overflow: hidden;
+}
+
+.sliding-text-container {
+    padding-top: 5vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sliding-text {
+    font-size: 70px;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide-text;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+.sliding-text1 {
+    font-size: 70px;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide-text1;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes slide-text {
+    from {
+        margin-left: 900px;
+    }
+
+    to {
+        margin-left: -900px;
+    }
+}
+
+@keyframes slide-text1 {
+    from {
+        margin-left: -900px;
+    }
+
+    to {
+        margin-left: 900px;
+    }
+}
+
+.piano-container {
+    height: 50%;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.mouth {
+    background-color: #660099;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    background-color: #ff3333;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouth-img {
+    height: 55vh;
+}
+
+.freccia {
+    height: 55vh;
+}
+
+.freccia:hover {
+    animation: arrow-turn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow-turn {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: -45deg;
+    }
+}
